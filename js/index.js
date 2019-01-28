@@ -67,5 +67,34 @@ let newNavItem = document.querySelector("nav");
 // anchor tag
 let newAnchorTag = document.createElement("a")
 
+/* CTA */
+//h1 selector
+const ctaH1 = document.getElementsByTagName('h1');
+ctaH1[0].textContent = siteContent.cta.h1;  // DOM IS AWESOME
+
+//button selector
+const ctaBtn = document.querySelector('button')
+ctaBtn.textContent = siteContent.cta.button;
+
+//h4 selectors
+const ctaH4 = document.querySelectorAll('h4')
+//h4 headers
+ctaH4[0].textContent = siteContent["main-content"]["features-h4"];
+ctaH4[1].textContent = siteContent["main-content"]["about-h4"];
+ctaH4[2].textContent = siteContent["main-content"]["services-h4"];
+ctaH4[3].textContent = siteContent["main-content"]["product-h4"];
+ctaH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+//paragraph selectors
+const para = document.querySelectorAll('p')
+para[0].textContent = siteContent["main-content"]["features-content"];
+para[1].textContent = siteContent["main-content"]["about-content"];
+para[2].textContent = siteContent["main-content"]["services-content"];
+para[3].textContent = siteContent["main-content"]["product-content"];
+para[4].textContent = siteContent["main-content"]["vision-content"];
+
+
+
+
 
 
