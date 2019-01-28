@@ -61,6 +61,13 @@ mainNavItems[3].textContent = siteContent["nav"]["nav-item-4"];
 mainNavItems[4].textContent = siteContent["nav"]["nav-item-5"];
 mainNavItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
+// change all original nav items to green
+for (let i = 0; i < mainNavItems.length; i++){
+  let child = Object.values(siteContent.nav)[i];
+  mainNavItems[i].textContent = child;
+  mainNavItems[i].style.color = 'green'; 
+}
+
 // querySelect nav
 let newNavItem = document.querySelector("nav");
 // new anchor tag
