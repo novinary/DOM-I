@@ -93,7 +93,13 @@ para[2].textContent = siteContent["main-content"]["services-content"];
 para[3].textContent = siteContent["main-content"]["product-content"];
 para[4].textContent = siteContent["main-content"]["vision-content"];
 
+//contact 
+para[2].textContent = siteContent["contact"]["address"];
+para[3].textContent = siteContent["contact"]["phone"];
+para[4].textContent = siteContent["contact"]["email"];
 
+//footer
+para[8].textContent = siteContent["footer"]["copyright"];
 
 
 
