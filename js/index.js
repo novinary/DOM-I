@@ -63,9 +63,23 @@ mainNavItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
 // querySelect nav
 let newNavItem = document.querySelector("nav");
+// new anchor tag
+let newAnchorTag = document.createElement("a");
+//name it
+newAnchorTag.textContent = "More info on DOM";
+//change color 
+newAnchorTag.style.color = 'green';
+//append the new anchor tag to the end
+newNavItem.appendChild(newAnchorTag);
 
-// anchor tag
-let newAnchorTag = document.createElement("a")
+// new anchor tag
+let newAnchorTag2 = document.createElement("a")
+// name it
+newAnchorTag2.textContent = 'Subscribe here!'
+// prepend the new anchor tag to the beginning
+newNavItem.prepend(newAnchorTag2);
+// change color
+newAnchorTag2.style.color = 'green';
 
 /* CTA */
 //h1 selector
@@ -84,6 +98,7 @@ ctaH4[1].textContent = siteContent["main-content"]["about-h4"];
 ctaH4[2].textContent = siteContent["main-content"]["services-h4"];
 ctaH4[3].textContent = siteContent["main-content"]["product-h4"];
 ctaH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
 
 //paragraph selectors
 const para = document.querySelectorAll('p')
