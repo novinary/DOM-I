@@ -50,7 +50,6 @@ midImg.src = siteContent["main-content"]["middle-img-src"];
 
 
 /* Nav */
-
 const mainNavItems = document.querySelectorAll("nav a");
 //console.log(mainNavItems);
 
@@ -116,9 +115,9 @@ para[3].textContent = siteContent["main-content"]["product-content"];
 para[4].textContent = siteContent["main-content"]["vision-content"];
 
 //contact 
-para[2].textContent = siteContent["contact"]["address"];
-para[3].textContent = siteContent["contact"]["phone"];
-para[4].textContent = siteContent["contact"]["email"];
+para[5].textContent = siteContent["contact"]["address"];
+para[6].textContent = siteContent["contact"]["phone"];
+para[7].textContent = siteContent["contact"]["email"];
 
 //footer
 para[8].textContent = siteContent["footer"]["copyright"];
