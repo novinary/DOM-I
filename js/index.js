@@ -37,6 +37,91 @@ const siteContent = {
   },
 };
 
+/* Images */
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.src = siteContent["cta"]["img-src"];
+
+let midImg = document.getElementById("middle-img");
+midImg.src = siteContent["main-content"]["middle-img-src"];
+
+
+/* Nav */
+const mainNavItems = document.querySelectorAll("nav a");
+//console.log(mainNavItems);
+
+mainNavItems[0].textContent = siteContent["nav"]["nav-item-1"];
+mainNavItems[1].textContent = siteContent["nav"]["nav-item-2"];
+mainNavItems[2].textContent = siteContent["nav"]["nav-item-3"];
+mainNavItems[3].textContent = siteContent["nav"]["nav-item-4"];
+mainNavItems[4].textContent = siteContent["nav"]["nav-item-5"];
+mainNavItems[5].textContent = siteContent["nav"]["nav-item-6"];
+
+// change all original nav items to green
+for (let i = 0; i < mainNavItems.length; i++){
+  let child = Object.values(siteContent.nav)[i];
+  mainNavItems[i].textContent = child;
+  mainNavItems[i].style.color = 'green'; 
+}
+
+// querySelect nav
+let newNavItem = document.querySelector("nav");
+// new anchor tag
+let newAnchorTag = document.createElement("a");
+//name it
+newAnchorTag.textContent = "More info on DOM";
+//change color 
+newAnchorTag.style.color = 'green';
+//append the new anchor tag to the end
+newNavItem.appendChild(newAnchorTag);
+
+// new anchor tag
+let newAnchorTag2 = document.createElement("a")
+// name it
+newAnchorTag2.textContent = 'Subscribe here!'
+// prepend the new anchor tag to the beginning
+newNavItem.prepend(newAnchorTag2);
+// change color
+newAnchorTag2.style.color = 'green';
+
+/* CTA */
+//h1 selector
+const ctaH1 = document.getElementsByTagName('h1');
+ctaH1[0].textContent = siteContent.cta.h1;  // DOM IS AWESOME
+
+//button selector
+const ctaBtn = document.querySelector('button')
+ctaBtn.textContent = siteContent.cta.button;
+
+//h4 selectors
+const ctaH4 = document.querySelectorAll('h4')
+//h4 headers
+ctaH4[0].textContent = siteContent["main-content"]["features-h4"];
+ctaH4[1].textContent = siteContent["main-content"]["about-h4"];
+ctaH4[2].textContent = siteContent["main-content"]["services-h4"];
+ctaH4[3].textContent = siteContent["main-content"]["product-h4"];
+ctaH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+
+//paragraph selectors
+const para = document.querySelectorAll('p')
+para[0].textContent = siteContent["main-content"]["features-content"];
+para[1].textContent = siteContent["main-content"]["about-content"];
+para[2].textContent = siteContent["main-content"]["services-content"];
+para[3].textContent = siteContent["main-content"]["product-content"];
+para[4].textContent = siteContent["main-content"]["vision-content"];
+
+//contact 
+para[5].textContent = siteContent["contact"]["address"];
+para[6].textContent = siteContent["contact"]["phone"];
+para[7].textContent = siteContent["contact"]["email"];
+
+//footer
+para[8].textContent = siteContent["footer"]["copyright"];
+
+
+
+
